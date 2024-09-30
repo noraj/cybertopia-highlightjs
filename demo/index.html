@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybertopia highlight.js theme preview</title>
+    <link rel="stylesheet" href="../themes/cybertopia-saturated.css">
+</head>
+<body>
+    <h1>Cybertopia highlight.js theme preview</h1>
+    
+    <div id="snippet-container"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('code-snippets.json')
+            .then(response => response.json())
+            .then(data => {
+                Object.entries(data).forEach(([lang, snippets]) => {
+                    const snippet = snippets[0];
+                    const figElement = document.createElement('figure');
+                    const capElement = document.createElement('figcaption');
+                    const preElement = document.createElement('pre');
+                    const codeElement = document.createElement('code');
+                    
+                    codeElement.className = 'language-' + lang.toLowerCase().replace(/ /g, '-');
+                    codeElement.textContent = snippet;
+                    capElement.textContent = lang;
+                    
+                    preElement.appendChild(codeElement);
+                    figElement.appendChild(capElement);
+                    figElement.appendChild(preElement);
+                    document.getElementById('snippet-container').appendChild(figElement);
+                    
+                    hljs.highlightBlock(codeElement);
+                });
+            })
+            .catch(error => console.error('Error fetching snippets:', error));
+    });
+    </script>
+</body>
+</html>
