@@ -32,6 +32,19 @@ For more information on how to use, see [highlight.js usage](https://highlightjs
 
 ## Demo
 
+### Local
+
+> [!TIP]
+> Could demonstrates the 4 variants.
+> For that, edit the stylesheet to change the theme variant.
+> For example:
+>
+> ```diff
+> -<link rel="stylesheet" href="../themes/cybertopia-saturated.css">
+> +<link rel="stylesheet" href="../themes/cybertopia-cherry.css">
+> ```
+
+
 ```zsh
 # Copy the source repository
 git clone https://github.com/noraj/cybertopia-highlightjs.git
@@ -42,5 +55,11 @@ ruby -run -e httpd -- cybertopia-highlightjs
 python -m http.server -d cybertopia-highlightjs -b 127.0.0.1 8080
 # Then access the demo page with your web browser
 xdg-open http://127.0.0.1:8080/demo/
-# Optionally edit the stylesheet to change the theme variant
 ```
+
+### Online
+
+> [!NOTE]
+> Only demonstrates **Cybertopia Saturated** variant.
+
+https://noraj.github.io/cybertopia-highlightjs/demo/
