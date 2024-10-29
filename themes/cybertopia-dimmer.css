@@ -93,6 +93,7 @@ code.hljs {
 .hljs-link {
   text-decoration: underline
 }
-.hljs-params, .hljs-operator {
+.hljs-params, .hljs-operator,
+.hljs-template-tag {
   color: var(--hljs-hue-7)
 }
