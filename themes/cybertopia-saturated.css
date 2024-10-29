@@ -31,7 +31,8 @@ code.hljs {
   background: var(--hljs-bg)
 }
 .hljs-comment,
-.hljs-quote {
+.hljs-quote,
+.hljs-code {
   color: var(--hljs-mono-3);
   font-style: italic
 }
