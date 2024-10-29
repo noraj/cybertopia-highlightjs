@@ -38,7 +38,8 @@ code.hljs {
 }
 .hljs-doctag,
 .hljs-keyword,
-.hljs-formula {
+.hljs-formula,
+.hljs-meta .hljs-keyword {
   color: var(--hljs-hue-3)
 }
 .hljs-section,
