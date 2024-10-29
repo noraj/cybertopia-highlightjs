@@ -33,7 +33,7 @@
                     figElement.appendChild(preElement);
                     document.getElementById('snippet-container').appendChild(figElement);
                     
-                    hljs.highlightBlock(codeElement);
+                    hljs.highlightElement(codeElement);
                 });
             })
             .catch(error => console.error('Error fetching snippets:', error));
