@@ -1,6 +1,6 @@
 # Cybertopia theme for highlight.js
 
-> Dark theme (and several variants) for [highlight.js](https://highlightjs.org/)
+> Dark theme (and several variants) of the [Cybertopia theme](https://github.com/noraj/cybertopia-theme) for [highlight.js](https://highlightjs.org/)
 
 Variant | Preview
 --- | ---
